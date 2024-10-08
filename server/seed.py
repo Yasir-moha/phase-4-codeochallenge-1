@@ -3,6 +3,7 @@ from random import choice as rc
 from app import app
 from models import db, Hero, Power, HeroPower
 
+
 if __name__ == '__main__':
     with app.app_context():
         print("Clearing db...")
@@ -34,7 +35,8 @@ if __name__ == '__main__':
             Hero(name="Elektra Natchios", super_name="Elektra"),
         ]
 
-        db.session.add_all(heroes)
+        db.session.add_all(heroes) 
+
 
         print("Adding powers to heroes...")
         strengths = ["Strong", "Weak", "Average"]

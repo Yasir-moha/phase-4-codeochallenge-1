@@ -7,3 +7,4 @@ def pytest_itemcollected(item):
     suf = node.__doc__.strip() if node.__doc__ else node.__name__
     if pref or suf:
         item._nodeid = ' '.join((pref, suf))
+        
